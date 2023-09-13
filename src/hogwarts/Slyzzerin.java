@@ -3,11 +3,11 @@ package hogwarts;
 import hogwarts.Hogwarts;
 
 public class Slyzzerin extends Hogwarts {
-    int cunning;
-    int determination;
-    int ambition;
-    int resourcefulness;
-    int thirstOfPower;
+    private int cunning;
+    private int determination;
+    private int ambition;
+    private int resourcefulness;
+    private int thirstOfPower;
 
     public Slyzzerin(String fullname, String faculty, int magicPower, int transgress, int cunning, int determination, int ambition, int resourcefulness, int thirstOfPower) {
         super(fullname, faculty, magicPower, transgress);
@@ -19,15 +19,15 @@ public class Slyzzerin extends Hogwarts {
     }
 
     @Override
-    public void printDescription() {
-        super.printDescription();
-        System.out.println("Свойства, присущие ученикам Слизорена:");
-        System.out.println("Хитрость: " + cunning);
-        System.out.println("Решительность: " + determination);
-        System.out.println("Амбициозность: " + ambition);
-        System.out.println("Находчивость: " + resourcefulness);
-        System.out.println("Жажда власти: " + thirstOfPower);
+    public String toString() {
+        return super.toString() + ". \nСвойства, присущие ученикам Слизорена:" +
+                        " Хитрость: " + cunning +
+                        ". Решительность: " + determination +
+                        ". Амбициозность: " + ambition +
+                        ". Находчивость: " + resourcefulness +
+                        ". Жажда власти: " + thirstOfPower;
     }
+
     public int getTotalScore() {
         return cunning + determination + ambition + resourcefulness + thirstOfPower;
     }

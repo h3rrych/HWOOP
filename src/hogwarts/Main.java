@@ -1,6 +1,7 @@
 package hogwarts;
 
 public class Main {
+
     public static void main(String[] args) {
         Griffindor harry = new Griffindor("Гарри Потер", "Гриффендор", 99, 90, 95,70,90);
         Griffindor germiona = new Griffindor("Гермиона Грейнджер", "Гриффендор", 90, 85, 70, 75, 90);
@@ -14,14 +15,13 @@ public class Main {
         Cogtevran chang = new Cogtevran("Чжоу Чанг", "Когтевран", 80, 50, 60, 70, 65, 60);
         Cogtevran padma = new Cogtevran("Падма Патил", "Когтевран", 70, 60, 80, 60, 50, 76);
         Cogtevran markus = new Cogtevran("Маркус Белби", "Когтевран", 70, 55, 90, 56, 77, 80);
-
-        harry.printDescription();
+        System.out.println(harry);
         System.out.println();
-        drako.printDescription();
+        System.out.println(drako);
         System.out.println();
-        smith.printDescription();
+        System.out.println(smith);
         System.out.println();
-        chang.printDescription();
+        System.out.println(chang);
         System.out.println();
         harry.compare(ron);
         germiona.compare(ron);
@@ -33,6 +33,6 @@ public class Main {
         smith.compare(harry);
         drako.compare(grehem);
         drako.compare(ron);
-    }
+   }
 }
 

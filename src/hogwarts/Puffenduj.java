@@ -3,9 +3,9 @@ package hogwarts;
 import hogwarts.Hogwarts;
 
 public class Puffenduj extends Hogwarts {
-    int hardWork;
-    int honesty;
-    int loyality;
+    private int hardWork;
+    private int honesty;
+    private int loyality;
 
     public Puffenduj(String fullname, String faculty, int magicPower, int transgress, int hardWork, int honesty, int loyality) {
         super(fullname, faculty, magicPower, transgress);
@@ -15,15 +15,16 @@ public class Puffenduj extends Hogwarts {
     }
 
     @Override
-    public void printDescription() {
-        super.printDescription();
-        System.out.println("Свойства, присущие ученикам Пуффендуя:");
-        System.out.println("Трудолюбие: " + hardWork);
-        System.out.println("Верность: " + honesty);
-        System.out.println("Честность: " + loyality);
+    public String toString() {
+        return super.toString() +
+        ".\nСвойства, присущие ученикам Пуффендуя" +
+                ". Трудолюбие: " + hardWork +
+                ". Верность: " + honesty +
+                ". Честность: " + loyality;
     }
+
     public int getTotalScore() {
-        return hardWork + honesty +loyality;
+        return hardWork + honesty + loyality;
     }
 
     public void compare(Puffenduj student) {

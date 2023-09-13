@@ -1,10 +1,10 @@
 package hogwarts;
 
 public class Cogtevran extends Hogwarts {
-    int mind;
-    int wisdom;
-    int witty;
-    int creation;
+    private int mind;
+    private int wisdom;
+    private int witty;
+    private int creation;
 
     public Cogtevran(String fullname, String faculty, int magicPower, int transgress, int mind, int wisdom, int witty, int creation) {
         super(fullname, faculty, magicPower, transgress);
@@ -15,13 +15,13 @@ public class Cogtevran extends Hogwarts {
     }
 
     @Override
-    public void printDescription() {
-        super.printDescription();
-        System.out.println("Свойства, присущие Когтеврановцам");
-        System.out.println("Ум: " + mind);
-        System.out.println("Мудрость : " + wisdom);
-        System.out.println("Остроумность: " + witty);
-        System.out.println("Творчество: " + creation);
+    public String toString() {
+        return super.toString() +
+                ".\nСвойства, присущие Когтеврановцам" +
+                ". Ум: " + mind +
+                ". Мудрость : " + wisdom +
+                ". Остроумность: " + witty +
+                ". Творчество: " + creation;
     }
     public int getTotalScore() {
         return mind + wisdom + witty + creation;

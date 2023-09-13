@@ -1,11 +1,26 @@
 package hogwarts;
 
 public class Hogwarts {
-    protected String fullname;
-    protected String faculty;
-    protected int magicPower;
-    protected int transgress;
+    private String fullname;
+    private String faculty;
+    private int magicPower;
+    private int transgress;
 
+    public Hogwarts(String fullname, String faculty, int magicPower, int transgress) {
+        this.fullname = fullname;
+        this.faculty = faculty;
+        this.magicPower = magicPower;
+        this.transgress = transgress;
+    }
+
+    @Override
+    public String toString() {
+        return "Ученик Хогвартса: " +
+                "Имя: " + fullname +
+                ". Факультет: " + faculty +
+                ". Магическая сила: " + magicPower +
+                ". Расстояние трансгрессии: " + transgress;
+    }
 
     public String getFullname() {
         return fullname;
@@ -37,22 +52,6 @@ public class Hogwarts {
 
     public void setTransgress(int transgress) {
         this.transgress = transgress;
-    }
-
-    public Hogwarts(String fullname, String faculty, int magicPower, int transgress) {
-        this.fullname = fullname;
-        this.faculty = faculty;
-        this.magicPower = magicPower;
-        this.transgress = transgress;
-
-
-    }
-
-    public void printDescription() {
-        System.out.println("Студент " + fullname + ":");
-        System.out.println("Свойства, присущие всем ученикам:");
-        System.out.println("Мощность магии: " + magicPower);
-        System.out.println("Расстояние трансгрессии: " + transgress);
     }
 
     public int getTotalScore() {

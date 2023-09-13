@@ -1,9 +1,9 @@
 package hogwarts;
 
 public class Griffindor extends Hogwarts {
-    public int nobility;
-    protected int honour;
-    protected int bravery;
+    private int nobility;
+    private int honour;
+    private int bravery;
 
     public Griffindor(String fullname, String faculty, int magicPower, int transgress, int nobility, int honour, int bravery) {
         super(fullname, faculty, magicPower, transgress);
@@ -14,12 +14,12 @@ public class Griffindor extends Hogwarts {
     }
 
     @Override
-    public void printDescription() {
-        super.printDescription();
-        System.out.println("Свойства, присущие Гриффиндорцам:");
-        System.out.println("Благородство: " + nobility);
-        System.out.println("Честь: " + honour);
-        System.out.println("Храбрость: " + bravery);
+    public String toString() {
+        return super.toString() +
+                ".\nСвойства, присущие Гриффиндорцам:" +
+                ". Благородство: " + nobility +
+                ". Честь: " + honour +
+                ". Храбрость: " + bravery;
     }
 
     public int getTotalScore() {
@@ -35,8 +35,8 @@ public class Griffindor extends Hogwarts {
             System.out.println(student.getFullname() + " является лучшим Гриффендоровцем, чем " + this.getFullname());
         } else
             System.out.println(getFullname() + " и " + student + " равны");
-        }
     }
+}
 
 
 
